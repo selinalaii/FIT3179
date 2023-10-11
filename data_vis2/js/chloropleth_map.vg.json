@@ -1,6 +1,6 @@
 {
     "$schema"   : "https://vega.github.io/schema/vega-lite/v5.json",
-    "title"     : "Worldwide Confirmed Cases in 2020",
+    "title"     : "Total YouTube Video Views in 2023",
     "background": null,
     "width"     : 800,
     "height"    : 400,
