@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src = "https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+  
+    <!-- Import vega-embed -->
+    <script src = "https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  
+    <!-- Import pure.css -->
+    <link rel = "stylesheet"
+          href = "https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+          integrity = "sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" 
+          crossorigin = "anonymous">
+  
+    <meta name = "viewport"
+          content = "width = device-width, initial-scale = 1">
+  
+    <!-- Google font -->
+    <link href = "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" 
+          rel = "stylesheet">
+
+    <!-- custom style -->
+    <style>
+        * {font-family: 'Open Sans'; text-align: justify}
+        h1 {font-size: 40px; font-weight: 600; text-align: center; font-weight: 600; padding: 50px; background: linear-gradient(90deg, rgba(242, 255, 0, 0.6) 0%, rgba(253, 113, 29, 0.5) 50%, rgba(252, 69, 69, 0.7) 100%);}
+        h2 {font-size: 20px; font-weight: 600; width: 40%; padding: 15px; background: linear-gradient(90deg, rgba(242, 255, 0, 0.6) 0%, rgba(253, 113, 29, 0.5) 50%, rgba(252, 69, 69, 0.7) 100%);}
+        body {background: linear-gradient(90deg, rgba(242, 255, 0, 0.6) 0%, rgba(253, 113, 29, 0.5) 50%, rgba(252, 69, 69, 0.7) 100%);}
+        .page {width: 950px; background-color: white; margin: auto; padding: 50px; padding-top: 35px;}
+        .vline {border-left: 8px solid black; height: 125px; position: relative}
+        .vis-container {width: 100%; text-align: center}
+        .vis-container2 {width: 100%; text-align: center; left: 4%}
+        .text1 {padding-left: 16px}
+        .text2 {text-transform: uppercase; color: black; padding: 0.4em 0; font-size: 75%; letter-spacing: 0.1em;}
+        .pure-g {margin-bottom: 25px;}
+        .img_class_1 {position: relative; top: 25%; left: 8%}
+        .img_class_2 {position: relative; top: 25%; right: 8%}
+    </style>
+</head>
+  
+<body>
+    <div class = "page">
+        
+        <!-- Introduction -->
+        <div style = "position: relative; left: 6%" class = "vline">
+            <div style = "position: relative; left: 2%" class = "text2">
+                <p><b>Introduction</b></p>
+                <p><b>•</b>&nbsp;&nbsp;&nbsp;PLACEHOLDER TEXT.</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <hr style = "width: 25%">
+        <br>
+        <br>
+        <br>
+   
+        <!-- Choropleth Map -->
+        <div class = "pure-g">
+            <div class = "pure-u-1-1">
+                <h2>PLACEHOLDER TEXT</h2>
+                <div class = "text1">
+                    <p>PLACEHOLDER TEXT</p>
+                    <br>
+                    <br>
+                    <div class = "pure-u-1-1">
+                        <div id = "choropleth_map" class = "vis-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+   
+        <!-- Bubble Plot -->
+        <div class = "pure-g">
+            <div class = "pure-u-1-1">
+                <h2>PLACEHOLDER TEXT</h2>
+                <div class = "text1">
+                    <p>PLACEHOLDER TEXT</p>
+                    <br>
+                    <br>
+                    <div class = "pure-u-1-1">
+                        <div id = "bubble_plot" class = "vis-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+   
+        <!-- Bar Chart -->
+        <div class = "pure-g">
+            <div class = "pure-u-1-1">
+                <h2>PLACEHOLDER</h2>
+                <div class = "text1">
+                    <p>PLACEHOLDER</p>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class = "pure-u-1-1">
+                <div class = "text1">
+                    <div id = "bar_chart"  class = "vis-container"></div>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        
+        <!-- Horizontal Bar Chart -->
+        <div class = "pure-g">
+            <div class = "pure-u-1-1">
+                <h2>PLACEHOLDER TEXT</h2>
+            </div>
+            <div class = "pure-u-1-3">
+                <div class = "text1">
+                </div>
+            </div>
+            <div class = "pure-u-2-3">
+                <div id = "horizontal_bar_graph" class = "vis-container2"></div>
+            </div>
+        </div>
+        
+        <br>
+   
+<script type = "text/javascript">
+    var vis = ["chloropleth_map.vg.json",
+               "bubble_plot.vg.json",
+               "bar_chart.vg.json",
+               "horozontal_bar_chart.vg.json"]
+  
+    vegaEmbed('#choropleth_map', vis[0], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    
+    vegaEmbed('#bubble_plot', vis[1], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  
+    vegaEmbed('#bar_chart', vis[2], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  
+    vegaEmbed('#horizontal_bar_chart', vis[3], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+</script>
+        
+</body>
