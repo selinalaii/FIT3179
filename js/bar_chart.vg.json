@@ -4,7 +4,7 @@
     "height"    : 500,
     "background": null,
     "title"     : "Total Views according to Category",
-    "data"      : {"url": "https://raw.githubusercontent.com/selinalaii/FIT3179/main/data_vis2/data/youtube.csv"},
+    "data"      : {"url": "https://raw.githubusercontent.com/selinalaii/FIT3179/main/data/youtube.csv"},
 
     "mark": "bar",
     "encoding": {"y": {"field": "video views", "type": "quantitative", "aggregate": "sum", "axis": {"title": "Total Views"}},

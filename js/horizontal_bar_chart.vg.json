@@ -4,7 +4,7 @@
     "height"    : 500,
     "background": null,
     "title"     : "Top 10 Content Creators",
-    "data"      : {"url": "https://raw.githubusercontent.com/selinalaii/FIT3179/main/data_vis2/data/youtube.csv"},
+    "data"      : {"url": "https://raw.githubusercontent.com/selinalaii/FIT3179/main/data/youtube.csv"},
 
     "transform": [{"window": [{"field": "subscribers", "op": "rank", "as": "rank"}],
                   "sort":[{"field": "subscribers", "order": "descending"}]},

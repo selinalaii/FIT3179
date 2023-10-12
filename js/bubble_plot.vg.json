@@ -4,7 +4,7 @@
     "height"    : 500,
     "background": null,
     "title"     : "Video Views against Total Subscribers",
-    "data"      : {"url": "https://raw.githubusercontent.com/selinalaii/FIT3179/main/data_vis2/data/youtube.csv"},
+    "data"      : {"url": "https://raw.githubusercontent.com/selinalaii/FIT3179/main/data/youtube.csv"},
     
     "transform" : [{"filter": "datum['video views'] > 0"},
                    {"filter": "datum['subscribers'] > 0"},
