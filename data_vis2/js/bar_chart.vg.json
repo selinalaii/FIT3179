@@ -1,0 +1,11 @@
+{
+    "$schema"   : "https://vega.github.io/schema/vega-lite/v5.json",
+    "width"     : 625,
+    "height"    : 500,
+    "background": null,
+    "title"     : "Total Views according to Category",
+    "data"      : {"url": "https://raw.githubusercontent.com/selinalaii/FIT3179/main/data_vis2/data/youtube.csv"},
+
+    "mark": "bar",
+    "encoding": {"y": {"field": "video views", "type": "quantitative", "aggregate": "sum", "axis": {"title": "Total Views"}},
+                "x": {"field": "category", "axis": {"title": "Category"}}}}

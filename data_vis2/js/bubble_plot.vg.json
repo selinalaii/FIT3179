@@ -1,0 +1,36 @@
+{
+    "$schema"   : "https://vega.github.io/schema/vega-lite/v4.json",
+    "width"     : 625,
+    "height"    : 500,
+    "background": null,
+    "title"     : "Video Views against Total Subscribers",
+    "data"      : {"url": "https://raw.githubusercontent.com/selinalaii/FIT3179/main/data_vis2/data/youtube.csv"},
+    
+    "transform" : [{"filter": "datum['video views'] > 0"},
+                   {"filter": "datum['subscribers'] > 0"},
+                   {"window": [{"op": "rank", "as": "rank"}]}, 
+                   {"filter": {"field": "rank", "lte": 50}}],
+  
+    "encoding"  : {"x": {"field": "video views", "title": "Video Views", "type": "quantitative", "scale": {"type": "log"}},
+                   
+                   "y": {"field": "subscribers", "title": "Subcriber Count", "type": "quantitative", "scale": {"type": "log"}}},
+
+    "layer"     : [{"mark": "circle", "encoding": {"size": {"field": "subscribers", "type": "quantitative", "title": "Subscriber Count", "scale": {"type": "threshold", 
+                    "domain": [50000000, 100000000, 200000000], "range": [150, 300, 550, 1500]},
+                    "legend": {"format": ".1s"}},
+                    "color": {"field": "video views", "title": "Video Views", "type": "quantitative", "scale": {"range": ["#89CFF0", "darkblue"]}},
+                
+                    "tooltip": [{"field": "Youtuber"   , "type": "nominal"},
+                                {"field": "video views" , "type": "quantitative"},
+                                {"field": "subscribers", "type": "quantitative", "format": ","},
+                                {"field": "category"   , "type": "nominal"},
+                                {"field": "Country"    , "type": "nominal"}]}}],
+  
+    "config"     : {"axis"  : {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+                    "header": {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+                    "mark"  : {"font": "Open Sans"},
+                    "legend": {"labelFont": "Open Sans", "titleFont": "Open Sans"},
+                    "title" : {"font": "Open Sans"},
+                    "style" : {"cell": {"stroke": "transparent"}},
+                    "text"  : {"align": "center", "fontWeight": "bold", "font": "Open Sans"}}
+  }
