@@ -25,8 +25,17 @@
                "bind": "legend"}],
               "mark": {"type": "arc", "tooltip": true}}],
 
-    "mark": {"type": "arc", "tooltip": true},
+    "mark": {"type": "arc", "tooltip": true, "stroke": "white", "strokeWidth": 2},
+
     "encoding": {
       "theta": {"field": "Number of YouTubers", "title": "Percentage of YouTubers", "type": "quantitative", "stack": "normalize", "sort": false},
-      "color": {"field": "grouped_channels", "title": "Channel Category", "type": "nominal", "scale": {"range": ["purple", "red", "orange", "yellow", "green", "blue", "pink", "brown", "grey"]}}}}
+      "color": {"field": "grouped_channels", "title": "Channel Category", "type": "nominal", "scale": {"range": ["purple", "red", "orange", "yellow", "green", "blue", "pink", "brown", "grey"]}}},
+    
+      "config"     : {"axis"  : {"labelFont": "sans-serif", "titleFont": "sans-serif"},
+                      "header": {"labelFont": "sans-serif", "titleFont": "sans-serif"},
+                      "mark"  : {"font": "sans-serif"},
+                      "legend": {"labelFont": "sans-serif", "titleFont": "sans-serif"},
+                      "title" : {"font": "sans-serif"},
+                      "style" : {"cell": {"stroke": "transparent"}},
+                      "text"  : {"align": "center", "fontWeight": "bold", "font": "sans-serif"}}}
   
