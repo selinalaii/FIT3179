@@ -56,7 +56,7 @@
             "size": {"field": "Youtuber Count",
                      "type": "quantitative",
                      "title": "Number of YouTubers",
-                     "scale": {"domain": [0, 100, 300], "range": [100, 300]}},
+                     "scale": {"domain": [0, 100, 300], "range": [150, 300]}},
 
             "color": {"field": "Population",
                       "type": "quantitative",
