@@ -3,7 +3,7 @@
     "width"     : 625,
     "height"    : 500,
     "background": null,
-    "title": {"text": "Channel Category Distribution",
+    "title": {"text": "",
               "fontSize": 24,
               "font": "sans-serif",
               "color": "indianred"},

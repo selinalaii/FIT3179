@@ -3,11 +3,11 @@
     "width"     : 625,
     "height"    : 500,
     "background": null,
-    "title": {"text": "Video Views against Total Subscribers",
+    "title": {"text": "",
               "fontSize": 24,
               "font": "sans-serif",
               "color": "indianred"},
-              
+
     "data"      : {"url": "https://raw.githubusercontent.com/selinalaii/FIT3179/main/data/youtube.csv"},
     
     "transform" : [{"filter": "datum['video views'] > 0"},
@@ -38,7 +38,7 @@
                               "fontStyle": "normal"},
           
                      "encoding": {"text": {"field": "Youtuber", "type": "nominal"},
-                                   "color": {"value": "darkgrey"}},
+                                   "color": {"value": "black"}},
           
                      "transform": [{"filter": "datum['Youtuber'] === 'T-Series' || datum['Youtuber'] === 'MrBeast' || datum['Youtuber'] === 'YouTube Movies' || datum['Youtuber'] === 'Cocomelon - Nursery Rhymes' || datum['Youtuber'] === 'PewDiePie' || datum['Youtuber'] === 'whinderssonnunes'"}]},
                     
