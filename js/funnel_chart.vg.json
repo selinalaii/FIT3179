@@ -10,6 +10,8 @@
 
     "data": {"url": "https://raw.githubusercontent.com/selinalaii/FIT3179/main/data/youtube.csv"},
 
+    "config": {"view": {"stroke": "transparent"}},
+
     "transform": [{"filter": "datum['category'] != 'nan'"},
                   {"aggregate": [{"op": "count", "field": "category", "as": "Youtuber Count"},
                                  {"op": "sum", "field": "video views", "as": "Total Views"}],
@@ -18,11 +20,11 @@
                    "sort":[{"field": "Total Views", "order": "descending"}]},
                    {"filter": "datum.rank <= 10"}],
 
-    "encoding": {"y": {"field": "category", "type": "nominal", "sort": {"field": "Total Views", "order": "descending"}}},
+    "encoding": {"y": {"field": "category", "type": "nominal", "title": "Channel Category", "sort": {"field": "Total Views", "order": "descending"}}},
 
     "layer": [{"mark": "bar",
                "encoding": {"color": {"field": "category", "type": "nominal", "legend": null, "scale": {"range": ["#FFD9D9", "#FF6666", "#FF0000", "#CC0000", "#990000", "#660000"]}},
-               "x":{"field": "Total Views", "type": "quantitative", "stack": "center"},
+               "x":{"field": "Total Views", "type": "quantitative", "stack": "center", "axis": {"grid": false}},
                "tooltip": [{"field": "category", "type": "nominal", "title": "Category"},
                            {"field": "Total Views", "type": "quantitative", "title": "Total Video Views", "format": ","},
                            {"field": "Youtuber Count", "type": "quantitative", "title": "Number of Youtuber"}]}}]}
