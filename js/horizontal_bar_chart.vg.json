@@ -17,6 +17,8 @@
                          "step": 1,
                          "name": "Youtuber Count: "}}],
 
+    "config": {"view": {"stroke": "transparent"}},
+
     "transform": [{"window": [{"field": "highest_yearly_earnings", "op": "rank", "as": "rank"}],
                   "sort":[{"field": "highest_yearly_earnings", "order": "descending"}]},
                   {"filter": "datum.rank <= youtuber_count"}],
