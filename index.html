@@ -21,113 +21,173 @@
     <!-- Google font -->
     <link href = "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" 
           rel = "stylesheet">
+
+    <!-- Import styles.css -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 </head>
   
 <body>
     <div class = "page">
         
         <!-- Introduction -->
-        <div style = "position: relative; left: 6%" class = "vline">
-            <div style = "position: relative; left: 2%" class = "text2">
-                <p><b>Introduction</b></p>
-                <p><b>•</b>&nbsp;&nbsp;&nbsp;PLACEHOLDER TEXT.</p>
-            </div>
+        <div class = "title">
+            <img style = "height: 100px", src = "data/logo.png">
+            <h1 style = "text-align:center; font-size: 40px; font-family: sans-serif; font-weight: bold; color: #8d0e0e;">
+                A Brief Overview of Youtube in 2023
+            </h1>
         </div>
-        <br>
-        <br>
-        <br>
-        <hr style = "width: 25%">
-        <br>
-        <br>
-        <br>
-   
-        <!-- Choropleth Map -->
-        <div class = "pure-g">
-            <div class = "pure-u-2-3">
-                <h2>PLACEHOLDER TEXT</h2>
-                <div class = "text1">
-                    <p>PLACEHOLDER TEXT</p>
-                    <br>
-                    <br>
-                    <div class = "pure-u-2-3">
-                        <div id = "choropleth_map" class = "vis-container"></div>
-                    </div>
+        <div
+            style="background-color: #8d0e0e; padding: 10px; border-radius: 10px;">
+            <p
+                style="text-align: justify; font-family: sans-serif; font-size: 24px; color: white;">
+                YouTube is one of the world's largest online video-sharing platform, where billions of people create, 
+                watch and share videos everyday. It is also one of the most popular social media platforms, with over 2 billion monthly active users. 
+                In this visualisation, we will be exploring the data of YouTube videos in 2023. We will be looking at the number of videos uploaded, the number of views, 
+                the number of likes and dislikes, and the number of comments. We will also be looking at the most popular categories and the most popular channels.
+            </p>
+        </div>
+
+        <div class = "space"> </div>
+
+        <!-- Propotional Symbol Map -->
+        <div class = "plot-section">
+            <div class="content">
+                <!-- Your content goes here -->
+                <h1
+                    style="text-align:center; font-size: 45px; font-family: sans-serif; font-weight: bold; color: #8B0000;">
+                    YouTubers Across the Globe</h1>
+                <p
+                    style="line-height: 1.5; margin-bottom: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 24px; color: rgb(105, 25, 25); text-align: justify;">
+                    <span class="highlight">United States (USA)</span>, has one of the most YouTubers across the world, at <span class="highlight">295</span>
+                    content creators. Whereas, <span class="highlight">India</span> has the second most YouTubers, at <span class="highlight">270</span> content creators. With this,
+                    we can see that the content creators are spreading across the world, and not only in the Western countries.
+                </p>
+
+
+                <div class="visualization-container">
+                    <div id = "propotional_symbol_map"></div>
                 </div>
+
+                <!-- Add your content elements here -->
             </div>
         </div>
 
-        <br>
-   
-        <!-- Bubble Plot -->
-        <div class = "pure-g">
-            <div class = "pure-u-1-3">
-                <h2>PLACEHOLDER TEXT</h2>
-                <div class = "text1">
-                    <p>PLACEHOLDER TEXT</p>
-                    <br>
-                    <br>
-                    <div class = "pure-u-1-3">
-                        <div id = "bubble_plot" class = "vis-container"></div>
-                    </div>
+        <div class = "space"> </div>
+
+        <!-- Funnel Chart -->
+        <div class = "plot-section">
+            <div class="content">
+                <!-- Your content goes here -->
+                <h1
+                    style="text-align:center; font-size: 45px; font-family: sans-serif; font-weight: bold; color: #8B0000;">
+                    Top 10 Most Popular Categories by Video Views</h1>
+                <p
+                    style="line-height: 1.5; margin-bottom: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 24px; color: rgb(105, 25, 25); text-align: justify;">
+                    YouTube is used for many things, but it is primarily used for <span class="highlight">Music</span>, as can be seen from the graph below.
+                    The second most viewed category would be <span class="highlight">Entertainment</span> and it can be seen that YouTube is usually used to kill time and boredom. Even us,
+                    the creators of this visualisation, use YouTube to kill time and boredom.
+
+
+                <div class="visualization-container">
+                    <div id = "funnel_chart"></div>
                 </div>
+
+                <!-- Add your content elements here -->
             </div>
         </div>
 
-        <br>
-   
-        <!-- Bar Chart -->
-        <div class = "pure-g">
-            <div class = "pure-u-1-1">
-                <h2>PLACEHOLDER</h2>
-                <div class = "text1">
-                    <p>PLACEHOLDER</p>
-                    <br>
-                    <br>
+        <div class = "space"> </div>
+
+        <!-- Pie Chart -->
+        <div class = "plot-section">
+            <div class="content">
+                <!-- Your content goes here -->
+                <h1
+                    style="text-align:center; font-size: 45px; font-family: sans-serif; font-weight: bold; color: #8B0000;">
+                    Channel Category Distribution</h1>
+                <p
+                    style="line-height: 1.5; margin-bottom: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 24px; color: rgb(105, 25, 25); text-align: justify;">
+                    Speaking of using YouTube as our source of <span class="highlight">Entertainment</span>, we can see that content creators enjoy that category as well, with around
+                    <span class="highlight">256</span> YouTubers creating content in that category. It is seen to be followed by the <span class="highlight">Music</span> category, with around <span class="highlight">182</span>
+                    content creators.
+
+
+                <div class="visualization-container">
+                    <div id = "pie_chart"></div>
                 </div>
-            </div>
-            <div class = "pure-u-1-1">
-                <div class = "text1">
-                    <div id = "bar_chart"  class = "vis-container"></div>
-                    <br>
-                    <br>
-                </div>
+
+                <!-- Add your content elements here -->
             </div>
         </div>
-        
-        <br>
-        
+
+        <div class = "space"> </div>
+
         <!-- Horizontal Bar Chart -->
-        <div class = "pure-g">
-            <div class = "pure-u-2-1">
-                <h2>PLACEHOLDER TEXT</h2>
-            </div>
-            <div class = "pure-u-2-1">
-                <div class = "text1">
+        <div class = "plot-section">
+            <div class="content">
+                <!-- Your content goes here -->
+                <h1
+                    style="text-align:center; font-size: 45px; font-family: sans-serif; font-weight: bold; color: #8B0000;">
+                    Top Earning Content Creators</h1>
+                <p
+                    style="line-height: 1.5; margin-bottom: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 24px; color: rgb(105, 25, 25); text-align: justify;">
+                    Diving into the earnings of YouTubers, <span class="highlight">DaFuq!?Boom!</span>, is the highest earning content creator, making an estimate of <span class="highlight">110.6 million</span>
+                    per year and they are in the <span class="highlight">Film & Animation</span> category. The second highest earning content creator is <span class="highlight">T-Series</span>, which is also
+                    in the top 3 most subscribed channels on YouTube, making an estimate of <span class="highlight">108.4 million</span> per year. 
+
+                <div class="visualization-container">
+                    <div id = "horizontal_bar_chart"></div>
                 </div>
-            </div>
-            <div class = "pure-u-2-1">
-                <div id = "horizontal_bar_graph" class = "vis-container2"></div>
+
+                <!-- Add your content elements here -->
             </div>
         </div>
-        
-        <br>
+
+        <div class = "space"> </div>
+
+        <!-- Bubble Plot -->
+        <div class = "plot-section">
+            <div class="content">
+                <!-- Your content goes here -->
+                <h1
+                    style="text-align:center; font-size: 45px; font-family: sans-serif; font-weight: bold; color: #8B0000;">
+                    Video Views against Total Subscribers</h1>
+                <p
+                    style="line-height: 1.5; margin-bottom: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 24px; color: rgb(105, 25, 25); text-align: justify;">
+                    The most impressive channel with the highest video views and subscriber count would be the top channel, which is <span class="highlight">T-Series</span>. It can be seen to be followed 
+                    by a well-known channel that caters towards children, also known as <span class="highlight">Cocomelon- Nursery Rhymes</span>. These channels are doing well as they have a high subcriber count
+                    as well as high video views as well.
+
+                <div class="visualization-container">
+                    <div id = "bubble_plot"></div>
+                </div>
+
+                <!-- Add your content elements here -->
+            </div>
+        </div>
+
+    </div>
    
 <script type = "text/javascript">
     var vis = ["js/proportional_symbol_map.vg.json",
                "js/bubble_plot.vg.json",
-               "js/bar_chart.vg.json",
-               "js/horozontal_bar_chart.vg.json"]
+               "js/funnel_chart.vg.json",
+               "js/horizontal_bar_chart.vg.json",
+               "js/pie_chart.vg.json"]
   
-    vegaEmbed('#choropleth_map', vis[0], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    vegaEmbed('#propotional_symbol_map', vis[0], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
     
     vegaEmbed('#bubble_plot', vis[1], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   
-    vegaEmbed('#bar_chart', vis[2], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    vegaEmbed('#funnel_chart', vis[2], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   
     vegaEmbed('#horizontal_bar_chart', vis[3], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#pie_chart', vis[4], {"actions": false}).then(function(result) {// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 </script>
         
