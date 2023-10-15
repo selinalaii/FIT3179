@@ -1,0 +1,32 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width"     : 625,
+    "height"    : 500,
+    "background": null,
+    "title": {"text": "Channel Category Distribution",
+              "fontSize": 24,
+              "font": "sans-serif",
+              "color": "indianred"},
+
+    "data": {"url": "https://raw.githubusercontent.com/selinalaii/FIT3179/main/data/youtube.csv"},
+
+    "config": {"view": {"stroke": "transparent"}},
+
+    "transform": [{"calculate": "datum.channel_type === 'Animals' || datum.channel_type === 'Autos' || datum.channel_type === 'Nonprofit' ? 'Other' : datum.channel_type",
+                   "as": "grouped_channels"},
+                  {"filter": "datum.grouped_channels != 'nan'"},
+                  {"aggregate": [{"op": "count", "field": "category", "as": "Youtuber Count"},
+                                 {"op": "sum", "field": "video views", "as": "Total Views"},
+                                 {"op": "count", "field": "Youtuber", "as": "Number of YouTubers"}],
+                   "groupby": ["grouped_channels"]}],
+
+    "layer": [{"params": [{"name": "channel_type_highlight",
+               "select": { "type": "point", "fields": ["grouped_channel_type"]},
+               "bind": "legend"}],
+              "mark": {"type": "arc", "tooltip": true}}],
+
+    "mark": {"type": "arc", "tooltip": true},
+    "encoding": {
+      "theta": {"field": "Number of YouTubers", "title": "Percentage of YouTubers", "type": "quantitative", "stack": "normalize", "sort": false},
+      "color": {"field": "grouped_channels", "title": "Channel Category", "type": "nominal", "scale": {"range": ["purple", "red", "orange", "yellow", "green", "blue", "pink", "brown", "grey"]}}}}
+  
