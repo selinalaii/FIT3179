@@ -1,44 +1,70 @@
-body *{
-    font-family: 'Open Sans', sans-serif;
+/* Title */
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0px;
 }
 
-h1 {
-    font-weight: 900;
-}
-
-body {
+/* Containers */
+.container {
+    text-align: center;
+    border-radius: 10px;
     background-color: lightgray;
+    width: 80%;
+    margin: auto;
+    padding: 0px;
+}
+
+/* Plot Titles */
+.plot-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Content */
+.content {
+    margin-top: 20px;
 }
 
 .page {
-    width: 850px;
-    background-color: white;
+    width: 1000px;
+    height: 4500px;
+    background-color: black;
     margin: auto;
-    padding: 50px;
-    padding-top: 35px;
+    border-radius: 10px;
+	padding: 50px;
+	padding-top: 10px;
 }
 
-.vis-container {
-    width: 100%;
+.space {
+    margin-bottom: 20px;
 }
 
-.description h2,
-h1 {
-    margin-top: 0px;
+.visual_container {
+    text-align: center;
+    border-radius: 10px;
+    background-color: red;
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
 }
 
-.description-right {
-    padding-left: 20px;
-}
-
-.description-left {
-    padding-right: 20px;
+.plot-section {
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .pure-g {
     margin-bottom: 40px;
 }
 
-.small-font {
-    font-size: 14px;
+.highlight {
+    color: lightgray;
+    font-weight: bold;
+    font-size: 30px;
 }
