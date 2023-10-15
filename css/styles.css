@@ -7,11 +7,11 @@
 }
 
 /* Containers */
-.container {
+.plot-container {
     text-align: center;
     border-radius: 10px;
     background-color: lightgray;
-    width: 80%;
+    width: 40%;
     margin: auto;
     padding: 0px;
 }
@@ -26,16 +26,15 @@
 }
 
 /* Content */
-.content {
+.plot-content {
     margin-top: 20px;
 }
 
 .page {
-    width: 1000px;
-    height: 4500px;
+    width: 60%;
+    height: 4800px;
     background-color: black;
     margin: auto;
-    border-radius: 10px;
 	padding: 50px;
 	padding-top: 10px;
 }
@@ -44,19 +43,16 @@
     margin-bottom: 20px;
 }
 
-.visual_container {
-    text-align: center;
+.vis-container {
     border-radius: 10px;
-    background-color: red;
     width: fit-content;
-    margin: auto;
-    padding: 10px;
 }
 
 .plot-section {
-    background-color: lightgray;
+    background-color: rgb(250, 139, 139);
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .pure-g {
@@ -64,7 +60,7 @@
 }
 
 .highlight {
-    color: lightgray;
+    color: #8B0000;
     font-weight: bold;
     font-size: 30px;
 }
